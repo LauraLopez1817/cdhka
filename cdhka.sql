@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-07-2024 a las 06:39:26
+-- Tiempo de generación: 29-07-2024 a las 04:08:12
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.1.25
 
@@ -38,8 +38,13 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id`, `nombre`, `descripcion`) VALUES
-(3, 'laptops', 'Es un ordenador cuyo uso principal está destinado a los videojuegos'),
-(4, 'PC', 'Una computadora personal suele estar equipada para cumplir tareas comunes de la informática moderna');
+(3, 'Zapatos de Tacón', 'Diseñado para elevar los talones y demostrar elegancia.'),
+(4, 'Zapatos de Fiesta', 'Diseñados para destacar en eventos sociales, con diversos diseños.'),
+(8, 'Zapatos Casuales', 'Diseñado para ocasiones formales y cotidianas, ideales para el uso diario.'),
+(9, 'Zapatos Deportivos', 'Diseñados para aspectos deportivos, desde zapatillas para correr como para entrenar.'),
+(10, 'Zapatos Formales', 'Diseñado para situaciones formales como trabajo o reuniones.'),
+(11, 'Zapatos Botas', 'Diseñados para agregar un toque de estilo para diversos usos.'),
+(12, 'Sandalias', 'Diseñados para climas cálidos en general, con diferentes modelos, tanto para mujeres como para hombres.');
 
 -- --------------------------------------------------------
 
@@ -70,7 +75,11 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `idcategoria`, `nombre`, `cantidad`, `precio`) VALUES
-(1, 3, 'HP', '4', '1000000');
+(1, 3, 'Botas', '5', '1000000'),
+(5, 9, 'Nike', '1', '50000'),
+(6, 9, 'Puma', '10', '150000'),
+(7, 8, 'Botín', '2', '120000'),
+(8, 11, 'Botas de agua.', '1', '60000');
 
 --
 -- Índices para tablas volcadas
@@ -101,13 +110,13 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restricciones para tablas volcadas
